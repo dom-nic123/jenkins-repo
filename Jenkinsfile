@@ -1,15 +1,11 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-	    steps {echo "This should run on the BUILD stage"
+    agent any
+    stages {
+        stage("First Stage") {
+            steps {
+                echo "This is a step inside my first stage build"
+                echo "This is the 2nd step"
+            }
+        }
     }
-    stage('Test') {
-	    steps {echo "This should run on the test stage"
-    }
-    stage('Deploy'){
-	    steps {echo "This should run on the Deploy stage"
-    }
-  }
 }
-    }
