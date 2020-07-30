@@ -1,8 +1,13 @@
 pipeline {
 	agent any
-	stages('Build') {
+	stage('Build'){
 	   steps {
-		echo "This should run on the build stage}
+		echo "This should run on the build stage"
 	}
      }
+       stage ('Test'){
+	steps {
+		echo "test step"
+		}
+	}
 }
